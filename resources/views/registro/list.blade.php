@@ -14,7 +14,7 @@
 </div>
 <div class="row">
 <div class="col-lg-12 margin-tb">
-  <table class="table table-bordered table-responsive-lg table-striped table-hover" id="lista_registro">
+  <table class="table table-bordered table-responsive-lg" id="lista_registro">
    <thead class="thead-dark">
         <tr>
             <th>No</th>
@@ -65,16 +65,17 @@
         @endforeach
 		  </tbody>
     </table>
+	{{$registro->links()}}
     </div>
     </div>
 	<script>
 	window.onload = function()
 	{
-		$('#lista_registro').DataTable({
+		/*$('#lista_registro').DataTable({
         "language": {
             "url": "//cdn.datatables.net/plug-ins/1.10.24/i18n/Spanish.json"
         }
-		});
+		});*/
 		
 	}
 	</script>

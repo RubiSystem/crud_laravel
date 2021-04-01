@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Models\Registro;
 
 
@@ -11,8 +12,7 @@ class RegistroController extends Controller
     
     public function index()
     {
-        $registro = Registro::latest()->paginate(5);
-
+        $registro = Registro::latest()->paginate(5); 
         return view('registro.list', compact('registro'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
